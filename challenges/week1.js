@@ -1,18 +1,20 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+///} else {
+  //let capWord = capitalize ("word")
+  if (capWord === capitalize) return ("WORD")
 }
+// If there isnt anything it will throw out error message otherwise it should capitalise the word entered
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
 }
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  // Add your code here!
+  
 }
 
 function getSalePrice(originalPrice, reduction) {
