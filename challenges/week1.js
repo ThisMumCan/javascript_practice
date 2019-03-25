@@ -8,7 +8,11 @@ function capitalize(word) {
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
-  if (lastName === undefined) throw new Error("lastName is required");
+  if (lastName === undefined) throw new Error("lastName is required");  
+  
+  var names = ['first name', 'last name'];
+  var generateInitials = names.spilt(text.CharAt0,charAt.text.length-1);
+ let sliced = 
 }
 
 function addVAT(originalPrice, vatRate) {
