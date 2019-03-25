@@ -1,8 +1,8 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-///} else {
+} else {
   //let capWord = capitalize ("word")
-  if (capWord === capitalize) return ("WORD")
+  let ('word'.toUpperCase());
 }
 // If there isnt anything it will throw out error message otherwise it should capitalise the word entered
 
