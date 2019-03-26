@@ -1,10 +1,10 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-} else {
-  //let capWord = capitalize ("word")
-  let ('word'.toUpperCase());
-}
-// If there isnt anything it will throw out error message otherwise it should capitalise the word entered
+  }else{
+  let (word.toUpperCase());
+  }
+
+// If there isnt any text it will throw out error message otherwise it will capitalise the word entered
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
@@ -12,8 +12,10 @@ function generateInitials(firstName, lastName) {
   
   var names = ['first name', 'last name'];
   var generateInitials = names.spilt(text.CharAt0,charAt.text.length-1);
- let sliced = 
+  let split = (intials) 
 }
+
+// Not progressed past here 
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
