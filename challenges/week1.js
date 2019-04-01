@@ -3,7 +3,7 @@ function capitalize(word) {
   }else{
   let (word.toUpperCase());
   }
-
+// return .join()
 // If there isnt any text it will throw out error message otherwise it will capitalise the word entered
 
 function generateInitials(firstName, lastName) {
