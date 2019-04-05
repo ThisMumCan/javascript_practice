@@ -49,7 +49,7 @@ describe("addVAT", () => {
   });
 });
 
-describe.only("getSalePrice", () => {
+describe("getSalePrice", () => {
   test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
@@ -89,7 +89,7 @@ describe("reverseWord", () => {
   });
 });
 
-describe("reverseAllWords", () => {
+describe.only("reverseAllWords", () => {
   test("reverses a single word in an array", () => {
     expect(reverseAllWords(["jest"])).toEqual(["tsej"]);
   });

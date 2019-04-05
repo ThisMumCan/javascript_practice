@@ -47,7 +47,7 @@ function getSalePrice(originalPrice, reduction) {
   if (reduction === undefined) throw new Error("reduction is required");
 
   const getSalePrice = originalPrice/100 *reduction;
-  const salePrice = originalPrice - reduction;
+  const salePrice = originalPrice - getSalePrice;
   return Math.round(salePrice*100) /100
 }
 /*
@@ -61,29 +61,45 @@ return sale price to 2 decimal places
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
+  var isOdd = str.length % 2 === 1
+  if (isOdd) {
+    var middleIndex = str.length/2
+    var roundedMiddleIndex = Math.floor(middleIndex)
+    return str[roundedMiddleIndex]
+  } else {
+  var firstMiddleIndex = (str.length/2)-1
+  var secondMiddleIndex = str.length/2
+  var bothMiddleIndexes = str [firstMiddleIndex] + str [secondMiddleIndex]
+  return bothMiddleIndexes
+  }
 }
 /* no text entered throw error message
-
-if string is equal in length boolean equation
-function that selects characters between two values
-return the single character
+if string is odd in length 
+find middleindex by dividing length/2
+return the single character str[placeinstring]
 else
-if string is odd in length boolean equation
+if string is even in length
+find first index by /2 -1
+find second index by /2
+add them together
 return the two middle characters
 */
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  const reversedCharacters = []
+  for (let i = 0; i < word.length; i++){
+    reversedCharacters.unshift(word[i])
+  }
+  return reversedCharacters.join("");
 }
-/* throws error if no word entered
-text equals find the length or word or sentence entered
-code that reverses words
-return the word or sentence in reverse 
-*/
+
 function reverseAllWords(words) {
-  if (words === undefined) throw new Error("words is required");
-  // Add your code here!
+    if (words === undefined) throw new Error("words is required");
+    const reversedWords = []
+    for (let i = 0; i < words.length; i++){
+      reversedWords.unshift(words[i])
+    }
+    return reversedWords.join(" ")
 }
 /* error if nothing entered
 find words in the array
