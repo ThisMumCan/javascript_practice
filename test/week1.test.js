@@ -25,7 +25,7 @@ describe("capitalize", () => {
   });
 });
 
-describe.only("generateInitials", () => {
+describe("generateInitials", () => {
   test("returns the initials of a firstname and surname", () => {
     expect(generateInitials("Frederic", "Bonneville")).toBe("F.B");
   });
@@ -49,7 +49,7 @@ describe("addVAT", () => {
   });
 });
 
-describe("getSalePrice", () => {
+describe.only("getSalePrice", () => {
   test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
@@ -63,7 +63,7 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 50 by 0%", () => {
-    expect(getSalePrice(50, 0)).toBe(0);
+    expect(getSalePrice(50, 0)).toBe(50);
   });
 });
 

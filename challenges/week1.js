@@ -10,12 +10,9 @@ function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");  
   
-  const names = ['firstName', 'lastName'];
   const capitaliseFirstInital = firstName[0].toUpperCase();
   const capitaliseLastInital = lastName[0].toUpperCase();
-  const generateInitials = capitaliseFirstInital + capitaliseLastInital
-  //const generateInitials = names.spilt(text.CharAt0,charAt.text.length-1);
-  //let split = (intials)
+  const generateInitials = capitaliseFirstInital + "." + capitaliseLastInital
   return generateInitials 
  
 }
@@ -32,20 +29,26 @@ return both initials capitalised
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  
+ 
+  const addVAT = originalPrice/100 *vatRate;
+  const newPrice = originalPrice + addVAT;
+  return Math.round(newPrice*100) /100 
 }
 /* if no price is entered throw error 
 if no Vat is entered throw error
 original price equals placeholder
 vat equals percentage of original price maths equation
 new price equals original price add vat
-return new price which is original plus vat
+return new price which is original plus vat rounded to 2 decimal places.
 */
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
+
+  const getSalePrice = originalPrice/100 *reduction;
+  const salePrice = originalPrice - reduction;
+  return Math.round(salePrice*100) /100
 }
 /*
 throw error if no price entered
@@ -53,8 +56,9 @@ throw error if no reduction entered
 
 reduction rate equals percentage off original price
 sale price equals original price less the reduction rate
-return sale price
+return sale price to 2 decimal places
 */
+
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   // Add your code here!
