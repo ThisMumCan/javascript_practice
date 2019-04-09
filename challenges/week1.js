@@ -93,14 +93,22 @@ function reverseWord(word) {
   return reversedCharacters.join("");
 }
 
-function reverseAllWords(words) {
+/*function reverseAllWords(words) {
     if (words === undefined) throw new Error("words is required");
     const reversedWords = []
     for (let i = 0; i < words.length; i++){
       reversedWords.unshift(words[i])
     }
     return reversedWords.join(" ")
-}
+  }
+    */
+function reverseAllWords(words) {
+  if (words === undefined) throw new Error("words is required");
+  const reverseAllWords = []
+  var splitWords = words.split();
+  var reverseWords = splitWords.reverse();
+  return reverseWords.join(" ") }
+    
 /* error if nothing entered
 find words in the array
 reverse these words
