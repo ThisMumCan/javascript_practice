@@ -46,11 +46,19 @@ return the total number of sheep
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
-  // Your code here!
+  person.forEach(function (postcode) {
+    const postcodeType = postcode.type;
+    if (postcodeType === "M") {
+      return "true";
+    }
+    else {
+      return "false";
+    }
 }
 
 /*
 if person has M postcode return true
+look at frist two letters of postcode -charAt()? 
 else 
 return false
 */
