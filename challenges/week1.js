@@ -105,10 +105,12 @@ function reverseWord(word) {
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   const reverseAllWords = []
-  var splitWords = words.split();
-  var reverseWords = splitWords.reverse();
-  return reverseWords.join(" ") }
-    
+  var str = words.toString().split(',')
+  for (let i = 0; i < str.length; i++){
+    reverseAllWords.unshift(words[i])
+  }
+  return reverseAllWords.join(",", "<br />")
+}
 /* error if nothing entered
 find words in the array
 reverse these words
@@ -117,12 +119,16 @@ return the reversed words in an array
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
+  let total = 0;
+  users.forEach(function(user) {
+    const machineType = user.type;
+    if (machineType === "Linux") {
+      total = total + 1;
+    }
+  });
+  return total;
 }
-/* Error if nothing entered
-Watch the rest of harriets video!
 
-*/
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
@@ -134,6 +140,13 @@ return the mean score
 else
 get mean score to 2 decimal places
 */
+
+function getMeanScore(scores) {
+  if (scores === undefined) throw new Error("scores is required");
+  const getTotal = sum(scores)
+  const getMean = getTotal / number of scores
+  return getMean to 2 decimal places
+}
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
