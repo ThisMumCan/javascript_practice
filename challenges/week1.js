@@ -148,7 +148,7 @@ Returns NaN
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
 
-  else if (n % 5 === 0 + n % 3 === 0) {
+  if (n % 15 === 0) {
     return "fizzbuzz";
   }
   else if (n % 3 === 0) {
@@ -162,8 +162,6 @@ function simpleFizzBuzz(n) {
     return n;
   }
 }
-n = 9
-console.log(simpleFizzBuzz)
 /* 
 
 fizz equals numbers dividable by 3 calculate this
@@ -177,7 +175,7 @@ else if
 n is not divisable by 3 or 5
 return the number
 
-FizzBuzz equals numbers divisable by 3 and 5
+If FizzBuzz equals numbers divisable by 3 and 5
 return FizzBuzz
 */
 module.exports = {
