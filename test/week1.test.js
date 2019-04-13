@@ -143,9 +143,8 @@ describe.only("simpleFizzBuzz", () => {
   });
 
   test("returns 'buzz' if the number is divisible by 5", () => {
-    expect(simpleFizzBuzz(3)).toBe("buzz");
+    expect(simpleFizzBuzz(5)).toBe("buzz");
   });
-
   test("returns the number if the number is divisible by neither 3 nor 5", () => {
     expect(simpleFizzBuzz(4)).toBe(4);
   });

@@ -147,10 +147,24 @@ Returns NaN
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+
+  else if (n % 5 === 0 + n % 3 === 0) {
+    return "fizzbuzz";
+  }
+  else if (n % 3 === 0) {
+    return "fizz";
+  }
+  else if (n % 5 === 0) {
+    return "buzz";
+  }
+
+  else {
+    return n;
+  }
 }
-/* check code against the one on slack and update it
-error if nothing entered
+n = 9
+console.log(simpleFizzBuzz)
+/* 
 
 fizz equals numbers dividable by 3 calculate this
 return fizz
