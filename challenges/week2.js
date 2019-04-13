@@ -32,27 +32,29 @@ function getBusNumbers(people) {
     return 1 + math.ceil(additionalBuses)
   }
 }
-/*
-if people =< 40 return 1 bus
-else if people => need more than one bus
-return number of buses required
-maths number of people/40 = number of buses.rounded up?
 
-
-*/
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
-  // Your code here!
+  var animals  = [];
+  var findSheep = animals.indexOf("sheep");
+  return value0f(findSheep);
 }
 /*
+search array for sheep indexOf()
+return the total number of sheep
 */
+
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
 }
+
 /*
+if person has M postcode return true
+else 
+return false
 */
-module.exports = {
+ module.exports = {
   getFillings,
   isFromManchester,
   countSheep,
