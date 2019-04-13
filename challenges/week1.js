@@ -132,14 +132,18 @@ function countLinuxUsers(users) {
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-  const getTotal = arrSum = function (scores) {
+  const arr = []
+  const arrSum = arr => function () {
     return arr.reduce(function (a, b) {
       return a + b
     }, 0);
   }
-  const getMean = getTotal / str.length;
+  const getMean = arrSum / arr.length;
   return Math.round(getMean * 100) / 100;
 }
+/*
+Returns NaN
+*/
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");

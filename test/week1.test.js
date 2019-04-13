@@ -126,7 +126,7 @@ describe("countLinuxUsers", () => {
   });
 });
 
-describe.only("getMeanScore", () => {
+describe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
     expect(getMeanScore([8, 9, 7])).toBe(8);
     expect(getMeanScore([88, 86, 93])).toBe(89);
@@ -137,7 +137,7 @@ describe.only("getMeanScore", () => {
   });
 });
 
-describe("simpleFizzBuzz", () => {
+describe.only("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
   });
