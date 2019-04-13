@@ -8,13 +8,13 @@ function capitalize(word) {
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
-  if (lastName === undefined) throw new Error("lastName is required");  
-  
+  if (lastName === undefined) throw new Error("lastName is required");
+
   const capitaliseFirstInital = firstName[0].toUpperCase();
   const capitaliseLastInital = lastName[0].toUpperCase();
   const generateInitials = capitaliseFirstInital + "." + capitaliseLastInital
-  return generateInitials 
- 
+  return generateInitials
+
 }
 /* function generateInitals from first and last names
 if first name is undefined throw error message
@@ -29,10 +29,10 @@ return both initials capitalised
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
- 
-  const addVAT = originalPrice/100 *vatRate;
+
+  const addVAT = originalPrice / 100 * vatRate;
   const newPrice = originalPrice + addVAT;
-  return Math.round(newPrice*100) /100 
+  return Math.round(newPrice * 100) / 100
 }
 /* if no price is entered throw error 
 if no Vat is entered throw error
@@ -46,9 +46,9 @@ function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
 
-  const getSalePrice = originalPrice/100 *reduction;
+  const getSalePrice = originalPrice / 100 * reduction;
   const salePrice = originalPrice - getSalePrice;
-  return Math.round(salePrice*100) /100
+  return Math.round(salePrice * 100) / 100
 }
 /*
 throw error if no price entered
@@ -63,14 +63,14 @@ function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   var isOdd = str.length % 2 === 1
   if (isOdd) {
-    var middleIndex = str.length/2
+    var middleIndex = str.length / 2
     var roundedMiddleIndex = Math.floor(middleIndex)
     return str[roundedMiddleIndex]
   } else {
-  var firstMiddleIndex = (str.length/2)-1
-  var secondMiddleIndex = str.length/2
-  var bothMiddleIndexes = str [firstMiddleIndex] + str [secondMiddleIndex]
-  return bothMiddleIndexes
+    var firstMiddleIndex = (str.length / 2) - 1
+    var secondMiddleIndex = str.length / 2
+    var bothMiddleIndexes = str[firstMiddleIndex] + str[secondMiddleIndex]
+    return bothMiddleIndexes
   }
 }
 /* no text entered throw error message
@@ -87,7 +87,7 @@ return the two middle characters
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   const reversedCharacters = []
-  for (let i = 0; i < word.length; i++){
+  for (let i = 0; i < word.length; i++) {
     reversedCharacters.unshift(word[i])
   }
   return reversedCharacters.join("");
@@ -106,7 +106,7 @@ function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   const reverseAllWords = []
   var str = words.toString().split(',')
-  for (let i = 0; i < str.length; i++){
+  for (let i = 0; i < str.length; i++) {
     reverseAllWords.unshift(words[i])
   }
   return reverseAllWords.join(",", "<br />")
@@ -120,7 +120,7 @@ return the reversed words in an array
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   let total = 0;
-  users.forEach(function(user) {
+  users.forEach(function (user) {
     const machineType = user.type;
     if (machineType === "Linux") {
       total = total + 1;
@@ -132,21 +132,15 @@ function countLinuxUsers(users) {
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
+  const getTotal = arrSum = function (scores) {
+    return arr.reduce(function (a, b) {
+      return a + b
+    }, 0);
+  }
+  const getMean = getTotal / str.length;
+  return Math.round(getMean * 100) / 100;
 }
-/* error if nothing entered
-calculate mean score add and divide by number of scores
-return the mean score
-else
-get mean score to 2 decimal places
-*/
 
-function getMeanScore(scores) {
-  if (scores === undefined) throw new Error("scores is required");
-  const getTotal = sum(scores)
-  const getMean = getTotal / number of scores
-  return getMean to 2 decimal places
-}
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
