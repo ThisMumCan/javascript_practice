@@ -25,7 +25,7 @@ describe("camelCaseWords", () => {
   });
 });
 
-describe("getSquares", () => {
+describe.only("getSquares", () => {
   test("returns an empty array if empty array passed", () => {
     expect(getSquares([])).toEqual([]);
   });
@@ -72,7 +72,8 @@ describe("getTotalSubjects", () => {
     expect(getTotalSubjects(people)).toBe(9);
   });
 });
-
+/* music is studied twice so should be 8?
+*/
 describe("checkIngredients", () => {
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
