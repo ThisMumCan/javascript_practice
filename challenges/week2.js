@@ -9,6 +9,9 @@ function getFillings(sandwich) {
     else if (breadType === "rye") {
       return "smoked salmon", "dill";
     }
+  }
+}
+
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error("person is required");
@@ -20,22 +23,24 @@ function isFromManchester(person) {
     else {
       return "false";
     }
-  
+  }
+}
+
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
-  const additionalBuses = people/40
+  const additionalBuses = people / 40
 
-  if (people <= 40){
+  if (people <= 40) {
     return 1;
   }
-  else if (people > 40){
+  else if (people > 40) {
     return 1 + math.ceil(additionalBuses)
   }
 }
 
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
-  var animals  = [];
+  var animals = [];
   var findSheep = animals.indexOf("sheep");
   return value0f(findSheep);
 }
@@ -54,15 +59,16 @@ function hasMPostCode(person) {
     else {
       return "false";
     }
+  }
 }
 
 /*
 if person has M postcode return true
-look at frist two letters of postcode -charAt()? 
+look at first two letters of postcode -charAt()? 
 else 
 return false
 */
- module.exports = {
+module.exports = {
   getFillings,
   isFromManchester,
   countSheep,
