@@ -8,15 +8,15 @@ function getSquares(nums) {
 
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
- 
-  
+
+
   const firstChar = words[0].toLowerCase();
   const otherWords = words(1) //locate words after postion 0 in index
   const uppercase = otherWords[1].toUpperCase(); //Capital all words after this
   const restOfWords = words.slice(1);
-  const fullWord = firstChar + uppercase+restOfWords;
+  const fullWord = firstChar + uppercase + restOfWords;
   return fullWord
-  }
+}
 
 
 /*
@@ -30,8 +30,14 @@ returns as a string without spacestrim()?
 */
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
-  // Your code here!
+  var getTotalSubjects = 0;
+  for (var i = 0; i < people.length; ++i) {
+    if (people.subjects[i] == "Subjects")
+      getTotalSubjects++;
+  }
+  return getTotalSubjects
 }
+
 /*
 search array for subjects
 count the results and add together
