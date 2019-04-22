@@ -1,29 +1,19 @@
 function getFillings(sandwich) {
   if (sandwich === undefined) throw new Error("ingredients is required");
 
-  sandwich.forEach(function (bread) {
-    const breadType = bread.type;
-    if (breadType === "sourdough") {
-      return "brie", "relish", "lettuce";
-    }
-    else if (breadType === "rye") {
-      return "smoked salmon", "dill";
-    }
-  }
+  return sandwich.fillings
 }
 
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error("person is required");
-  person.forEach(function (city) {
-    const cityType = city.type;
-    if (cityType === "Manchester") {
-      return "true";
+ 
+    if (person.city === "Manchester") {
+      return true;
     }
     else {
-      return "false";
+      return false;
     }
-  }
 }
 
 function getBusNumbers(people) {
@@ -34,20 +24,19 @@ function getBusNumbers(people) {
     return 1;
   }
   else if (people > 40) {
-    return 1 + math.ceil(additionalBuses)
+    return Math.ceil(additionalBuses)
   }
 }
 
 function countSheep(arr) {
-  if (!arr) throw new Error("arr is required");
-  var animals = [];
-  var findSheep = animals.indexOf("sheep");
-  return value0f(findSheep);
+    if (!arr) throw new Error("arr is required");
+  var countSheep = 0;
+  for(var i = 0; i < arr.length; ++i){
+      if(arr[i] == "sheep")
+          countSheep++;
+  }
+  return countSheep
 }
-/*
-search array for sheep indexOf()
-return the total number of sheep
-*/
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
@@ -59,7 +48,7 @@ function hasMPostCode(person) {
     else {
       return "false";
     }
-  }
+  })
 }
 
 /*
