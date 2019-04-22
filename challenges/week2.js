@@ -40,16 +40,14 @@ function countSheep(arr) {
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
-  person.forEach(function (postcode) {
-    const postcodeType = postcode.type;
-    if (postcodeType === "M") {
-      return "true";
-    }
-    else {
-      return "false";
-    }
-  })
+  if (person.address.city === "Manchester") {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
+   
 
 /*
 if person has M postcode return true
