@@ -47,11 +47,15 @@ return the sum of subjects studied
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-
-  function checkIngredients = menu.indexOf(ingredient);
-  if checkIngredients === (-1) return false 
-  else return true
 }
+  /*if menu.indexOf(ingredient) > -1;
+  {
+    return false;
+  
+  else return true;
+  }
+}
+
 /*
 searches array for named ingredient returns true if found else returns false
 boolean
@@ -61,13 +65,24 @@ indexOf()
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
-  // Your code here!
+
+  var bothArrays = arr1.concat(arr2);
+  var findDuplicates =bothArrays.filter(duplicateNumbers)
+  var makeNewArray= findDuplicates.push()
+  return makeNewArray.sort();
+
 }
 /*
 concat() returns a copy of both arrays
 search for duplicates
 .push adds elements to new array
 return single array in ascending order with no repeated duplicated number
+function removeDuplicateUsingFilter(arr){
+    let unique_array = arr.filter(function(elem, index, self) {
+        return index == self.indexOf(elem);
+    });
+    return unique_array
+}
 
 */
 module.exports = {
