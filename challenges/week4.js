@@ -1,14 +1,19 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+let newArray = nums.filter(findSmallNums)
+return newArray >1;
 }
-/**/ 
+/*
+filter numbers less than 1*/ 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
   // Your code here
 }
-/**/ 
+/*
+while var = firstcharacter
+return the rest of word
+*/ 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
   // Your code here
