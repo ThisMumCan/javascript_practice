@@ -47,7 +47,10 @@ return the sum of subjects studied
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-  // Your code here!
+  
+  const checkIngredients = menu.find(ingredient)
+
+  return checkIngredients 
 }
 /*
 searches array for named ingredient returns true if found else returns false
