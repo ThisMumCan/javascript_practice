@@ -1,8 +1,11 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-let newArray = nums.filter(findSmallNums)
-return newArray >1;
-}
+
+let filtered = nums.filter(findSmallNums);
+return filtered >=1 ;}
+
+
+
 /*
 filter numbers less than 1*/ 
 function findNamesBeginningWith(names, char) {
