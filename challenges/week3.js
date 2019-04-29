@@ -47,19 +47,19 @@ return the sum of subjects studied
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-}
-  /*if menu.indexOf(ingredient) > -1;
-  {
+
+  if (menu.indexOf(ingredient) >0) {
     return false;
-  
-  else return true;
+  }
+  else {
+    return true;
   }
 }
 
 /*
-searches array for named ingredient returns true if found else returns false
+searches array for named ingredient returns false if found else returns true
 boolean
-indexOf()
+indexOf() returns -1 if searched item isnt returned
 */
 
 function duplicateNumbers(arr1, arr2) {
@@ -67,8 +67,8 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr2) throw new Error("arr2 is required");
 
   var bothArrays = arr1.concat(arr2);
-  var findDuplicates =bothArrays.filter(duplicateNumbers)
-  var makeNewArray= findDuplicates.push()
+  var findDuplicates = bothArrays.filter(duplicateNumbers)
+  var makeNewArray = findDuplicates.push()
   return makeNewArray.sort();
 
 }
