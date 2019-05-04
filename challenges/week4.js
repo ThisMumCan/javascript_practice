@@ -12,12 +12,14 @@ filter numbers less than 1*/
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
+  const found =[];
+  for (let i = 0; i < names.length; i++);
+  const name = names[i];
+  const findFirstChar = name.slice(0, 2)
+  if (findFirstChar === char){
+    found.push(name)}
 
-  const findFirstChar = names[0]
-
-  const findNamesBeginningWith = names.find(findFirstChar === char);
-    return findNamesBeginningWith
-  
+return found
 
 }
 
