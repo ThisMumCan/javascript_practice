@@ -41,7 +41,16 @@ function findVerbs(words) {
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  // search array
+const integers = []
+for (let i = 0; i<nums.length; i++){
+const num = nums [i];
+const findIntegers = num.slice(0,2)
+if (findIntegers === "1"){
+  integers.push(num);
+}
+}
+  // return array of whole numbers
 }
 /**/
 function getCities(users) {
