@@ -45,12 +45,12 @@ function getIntegers(nums) {
 const integers = []
 for (let i = 0; i<nums.length; i++){
 const num = nums [i];
-const findIntegers = num.slice(0,2)
-if (findIntegers === "1"){
+const findIntegers =Number.isInteger(num)
+if (findIntegers === true){
   integers.push(num);
 }
 }
-  // return array of whole numbers
+  return integers;
 }
 /**/
 function getCities(users) {
