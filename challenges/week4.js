@@ -41,22 +41,31 @@ function findVerbs(words) {
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // search array
-const integers = []
-for (let i = 0; i<nums.length; i++){
-const num = nums [i];
-const findIntegers =Number.isInteger(num)
-if (findIntegers === true){
-  integers.push(num);
-}
-}
+
+  const integers = []
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    const findIntegers = Number.isInteger(num)
+    if (findIntegers === true) {
+      integers.push(num);
+    }
+  }
   return integers;
 }
-/**/
+
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
+ // const cities = []
+  /*for (let i = 0; i < users.length; i++) {
+  const user = users[i]
+  const findCities = users.displayName
+  /*if (findCities=== ""){
+    cities.push(user)
+  }*/
+
+return [users.displayName]//cities
 }
+//}
 /**/
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
