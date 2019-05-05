@@ -9,26 +9,36 @@ function findSmallNums(nums) {
 
 /*
 filter numbers less than 1*/
+
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  const found =[];
-  for (let i = 0; i < names.length; i++);
-  const name = names[i];
-  const findFirstChar = name.slice(0, 2)
-  if (findFirstChar === char){
-    found.push(name)}
-
-return found
+  const found = [];
+  for (let i = 0; i < names.length; i++) {
+    const name = names[i];
+    const findFirstChar = name.slice(0, 1)
+    if (findFirstChar === char) {
+      found.push(name);
+    }
+  }
+  return found;
 
 }
 
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
+  const verbs = [];
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    const find3Char = word.slice(0, 3)
+    if (find3Char === "to ") {
+      verbs.push(word);
+    }
+  }
+  return verbs;
 }
-/**/
+
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
