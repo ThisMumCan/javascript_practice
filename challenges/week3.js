@@ -11,7 +11,7 @@ function camelCaseWords(words) {
 
 
   const firstChar = words[0].toLowerCase();
-  const otherWords = words(1) //locate words after postion 0 in index
+  const otherWords = words[1] //locate words after postion 0 in index
   const uppercase = otherWords[1].toUpperCase(); //Capital all words after this
   const restOfWords = words.slice(1);
   const fullWord = firstChar + uppercase + restOfWords;
@@ -48,14 +48,17 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
 
-  if (menu.indexOf(ingredient) === -1) {
-    return false;
-  }
-  else {
-    return true;
-  }
-}
+  let foundFoodItem = false;
 
+  menu.forEach(function (menuItem) {
+    menuItem.ingredients.forEach(function (menuItemIngredient) {
+      if (menuItemIngredient === ingredient) {
+        foundFoodItem = true;
+      }
+    });
+  });
+  return foundFoodItem;
+}
 /*
 searches array for named ingredient returns false if found else returns true
 boolean
@@ -65,10 +68,11 @@ indexOf() returns -1 if searched item isnt returned
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
-
+const makeNewArray = [];
   var bothArrays = arr1.concat(arr2);
   var findDuplicates = bothArrays.filter(duplicateNumbers)
-  var makeNewArray = findDuplicates.push()
+  var duplicateNumbers =(nums === nums)
+  var NewArray = findDuplicates.push()
   return makeNewArray.sort();
 
 }
@@ -76,12 +80,18 @@ function duplicateNumbers(arr1, arr2) {
 concat() returns a copy of both arrays
 search for duplicates
 .push adds elements to new array
-return single array in ascending order with no repeated duplicated number
-function removeDuplicateUsingFilter(arr){
-    let unique_array = arr.filter(function(elem, index, self) {
-        return index == self.indexOf(elem);
-    });
-    return unique_array
+Harriets solution:
+const duplicates = [];
+
+arr1.forEach(function (num){
+  const numIsInArr2 = arr2.includes(num);
+  if (numIsInArr2 {
+    const duplicatesContainsNum === false {
+      duplicates.push(num);
+    }
+    }
+  });
+  return duplicates.sort.(function(a, b) {return a-b});
 }
 
 */

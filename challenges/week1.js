@@ -104,17 +104,29 @@ function reverseWord(word) {
     */
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  const reverseAllWords = []
-  var str = words.toString().split(',')
-  for (let i = 0; i < str.length; i++) {
-    reverseAllWords.unshift(words[i])
+}
+/*
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i]
+    reverseEachWord.unshift() = word.split("").reverse().join("").split(" ").reverse()
+
+    }
+    return reverseEachWord.join( " ")
   }
+
+  /*
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i]
+    reverseAllWords.unshift(word)
+  }
+  
   return reverseAllWords.join(",", "<br />")
 }
 /* error if nothing entered
 find words in the array
 reverse these words
 return the reversed words in an array
+seems to be returning one letter from each word :/
 */
 
 function countLinuxUsers(users) {
@@ -139,7 +151,7 @@ function getMeanScore(scores) {
     }, 0);
   }
   const getMean = arrSum / arr.length;
-  return Math.round(getMean * 100) / 100;
+  return Math.round(getMean* 100) / 100 ;
 }
 /*
 Returns NaN

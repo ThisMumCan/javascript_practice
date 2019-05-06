@@ -93,19 +93,28 @@ function findSentencesContaining(sentences, str) {
   }
 }
 
-
-
-
-
 /*
-filter search sentences for the str
+find search sentences for the str
 return the whole sentence
 */
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  // Your code here
+  const largestNumbers = [];
+
+  triangles.forEach( function (triangle) {
+    triangle.sort(function (a,b){
+      return b - a;
+    });
+    const largestNumber = triangle[0]
+    largestNumbers.push(largestNumber);
+    })
+    return largestNumbers;
 }
-/**/
+/*
+order the arrays 
+find highest
+return all highest values to array
+*/
 module.exports = {
   findSmallNums,
   findNamesBeginningWith,
