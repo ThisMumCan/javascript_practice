@@ -67,9 +67,17 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  
+  const squareRoots = nums.map(function (num){
+    const getSquareRoot = Math.sqrt(num);
+    return Math.ceil(getSquareRoot)
+  })
+return squareRoots
 }
-/**/
+/*
+Math.floor
+Math.sqrt(num)
+*/
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");

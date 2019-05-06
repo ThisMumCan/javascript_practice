@@ -48,7 +48,7 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
 
-  if (menu.indexOf(ingredient) >0) {
+  if (menu.indexOf(ingredient) === -1) {
     return false;
   }
   else {
