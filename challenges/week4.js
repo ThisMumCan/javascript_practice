@@ -80,17 +80,23 @@ failing as it rounds whole number (6) to 2 square places!
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  const findStr = sentences.filter(function(str){
-   const matchStr = str.length;
-if (matchStr === "str"){
-      return true;
-    }else {
-      return false;
-    }
+  const matchedSentences = [];
+  for (let i = 0; i < sentences.length; i++) {
+    const sentence = sentences[i]
+    const findMatch = sentence.find("str") 
+    if (sentence ==="str"){
 
-  })
-return findStr
+    matchedSentences.push(findMatch)
+  }
+
+  return matchedSentences
+  }
 }
+
+
+
+
+
 /*
 filter search sentences for the str
 return the whole sentence
