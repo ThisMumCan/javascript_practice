@@ -70,7 +70,7 @@ function getSquareRoots(nums) {
   
   const squareRoots = nums.map(function (num){
     const getSquareRoot = Math.sqrt(num);
-    return Math.ceil(getSquareRoot)
+    return getSquareRoot.toFixed(2)
   })
 return squareRoots
 }
