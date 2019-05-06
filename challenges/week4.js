@@ -55,18 +55,16 @@ function getIntegers(nums) {
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
- // const cities = []
-  /*for (let i = 0; i < users.length; i++) {
-  const user = users[i]
-  const findCities = users.displayName
-  /*if (findCities=== ""){
-    cities.push(user)
-  }*/
+  const cities = []
+  for (let i = 0; i < users.length; i++) {
+    const user = users[i]
+    const findCities = user.data.city.displayName;
+    cities.push(findCities)
+  }
 
-return [users.displayName]//cities
+  return cities
 }
-//}
-/**/
+
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
