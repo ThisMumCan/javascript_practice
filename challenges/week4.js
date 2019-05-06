@@ -67,23 +67,34 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  
-  const squareRoots = nums.map(function (num){
+
+  const squareRoots = nums.map(function (num) {
     const getSquareRoot = Math.sqrt(num);
     return getSquareRoot.toFixed(2)
   })
-return squareRoots
+  return squareRoots
 }
 /*
-Math.floor
-Math.sqrt(num)
+failing as it rounds whole number (6) to 2 square places!
 */
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
+  const findStr = sentences.filter(function(str){
+   const matchStr = str.length;
+if (matchStr === "str"){
+      return true;
+    }else {
+      return false;
+    }
+
+  })
+return findStr
 }
-/**/
+/*
+filter search sentences for the str
+return the whole sentence
+*/
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   // Your code here
