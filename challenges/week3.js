@@ -68,10 +68,10 @@ indexOf() returns -1 if searched item isnt returned
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
-const makeNewArray = [];
+  const makeNewArray = [];
   var bothArrays = arr1.concat(arr2);
   var findDuplicates = bothArrays.filter(duplicateNumbers)
-  var duplicateNumbers =(nums === nums)
+  var duplicateNumbers = (nums === nums)
   var NewArray = findDuplicates.push()
   return makeNewArray.sort();
 

@@ -151,7 +151,7 @@ function getMeanScore(scores) {
     }, 0);
   }
   const getMean = arrSum / arr.length;
-  return Math.round(getMean* 100) / 100 ;
+  return Math.round(getMean * 100) / 100;
 }
 /*
 Returns NaN

@@ -83,13 +83,13 @@ function findSentencesContaining(sentences, str) {
   const matchedSentences = [];
   for (let i = 0; i < sentences.length; i++) {
     const sentence = sentences[i]
-    const findMatch = sentence.find("str") 
-    if (sentence ==="str"){
+    const findMatch = sentence.find("str")
+    if (sentence === "str") {
 
-    matchedSentences.push(findMatch)
-  }
+      matchedSentences.push(findMatch)
+    }
 
-  return matchedSentences
+    return matchedSentences
   }
 }
 
@@ -101,14 +101,14 @@ function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   const largestNumbers = [];
 
-  triangles.forEach( function (triangle) {
-    triangle.sort(function (a,b){
+  triangles.forEach(function (triangle) {
+    triangle.sort(function (a, b) {
       return b - a;
     });
     const largestNumber = triangle[0]
     largestNumbers.push(largestNumber);
-    })
-    return largestNumbers;
+  })
+  return largestNumbers;
 }
 /*
 order the arrays 
